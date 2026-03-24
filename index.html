@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title>AngularJS Example</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-controller="myController">
+    <h3>Counter: {{ count }}</h3>
+    <button ng-click="increment()">Click Me</button>
+    <script>
+        var app = angular.module("myApp", []);
+        app.controller("myController", function($scope) {
+            $scope.count = 0;
+            $scope.increment = function() {
+                $scope.count++;
+            };
+        });
+    </script>
+</body>
+</html>
